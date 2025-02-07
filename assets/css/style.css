@@ -247,7 +247,6 @@ section {
 
 /* 📌 List Links */
 .content ul li a {
-    color: #1DB954;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -255,7 +254,6 @@ section {
 
 /* 📌 Link Hover Effect */
 .content ul li a:hover {
-    color: #25d366;
     text-decoration: underline;
 }
 
@@ -272,5 +270,33 @@ html, body {
 
     .content {
         min-height: 100vh; /* Matches sidebar height */
+    }
+}
+
+/* 📌 Sidebar Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 15px; /* Ensures it stays at the top */
+    left: 15px; /* Positions it properly */
+    background: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Ensures it stays above other elements */
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+.menu-toggle:hover {
+    background: #25d366;
+}
+
+/* 📌 Hide Toggle Button on Larger Screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
 }
