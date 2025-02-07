@@ -18,24 +18,25 @@ body {
     display: flex;
     max-width: 1400px;
     margin: auto;
-    padding: 20px;
+    padding: 30px; /* Increased Padding */
 }
 
 /* 📌 Sidebar */
 .sidebar {
-    width: 220px;
+    width: 240px;
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
     background: #1a1a1a;
-    padding: 20px;
+    padding: 25px;
     color: white;
     overflow-y: auto;
     border-right: 1px solid #333;
     transition: transform 0.3s ease-in-out;
 }
 
+/* Sidebar Title */
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 20px;
@@ -124,47 +125,48 @@ body {
 
 /* 📌 Main Content */
 .content {
-    margin-left: 240px;
-    padding: 30px;
+    margin-left: 260px;
+    padding: 40px; /* Increased Padding */
     max-width: 900px;
 }
 
 /* 📌 Header */
 header h1 {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 header p {
     color: #b0b0b0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-/* 📌 Table of Contents */
+/* 📌 Improved Table of Contents */
 .toc {
-    padding: 15px;
-    background: #1a1a1a;
+    padding: 20px; /* More padding */
+    background: #181818;
     border-left: 4px solid #1DB954;
     margin-bottom: 30px;
     border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .toc h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-bottom: 12px;
     color: #1DB954;
 }
 
-/* 📌 TOC List */
+/* TOC List */
 .toc ul {
     list-style: none;
-    padding-left: 15px;
+    padding-left: 20px; /* More indentation */
 }
 
 .toc ul li {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 
 .toc ul li a {
@@ -179,22 +181,22 @@ header p {
     text-decoration: underline;
 }
 
-/* 📌 Proper Nested TOC */
+/* Proper Nested TOC */
 .toc ul ul {
-    padding-left: 20px;
+    padding-left: 25px;
     border-left: 2px solid #1DB954;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .toc ul ul li {
-    margin: 3px 0;
+    margin: 4px 0;
 }
 
 /* 📌 Code Blocks */
 pre {
     background: #1e1e1e;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px; /* More Padding */
+    border-radius: 10px;
     overflow-x: auto;
     color: #d4d4d4;
     font-size: 14px;
@@ -205,39 +207,39 @@ pre {
 /* Code Styling */
 code {
     color: #4CAF50;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* 📌 Section Styling */
 section {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
+    margin-bottom: 45px;
+    padding: 25px;
     border-bottom: 1px solid #333;
     background: #181818;
-    padding: 20px;
     border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* 📌 Improved Lists */
 .content ul {
     list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 15px;
+    padding-left: 25px; /* More Indentation */
+    margin-bottom: 20px;
 }
 
 .content ul li {
-    margin-bottom: 6px;
-    padding-left: 8px;
-    border-left: 3px solid #1DB954;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    border-left: 4px solid #1DB954;
     background: #1a1a1a;
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 8px 15px;
+    border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
 
 .content ul li:hover {
     background: #222;
-    border-left: 3px solid #25d366;
+    border-left: 4px solid #25d366;
 }
 
 .content ul li a {
@@ -254,12 +256,12 @@ section {
 
 /* 📌 Nested Lists */
 .content ul ul {
-    margin-top: 5px;
-    padding-left: 20px;
+    margin-top: 6px;
+    padding-left: 25px;
     border-left: 2px solid #888;
 }
 
 .content ul ul li {
-    padding: 4px 10px;
+    padding: 6px 12px;
     background: #181818;
 }
