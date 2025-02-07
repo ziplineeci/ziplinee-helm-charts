@@ -9,31 +9,32 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.8;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #f7f7f7;
     padding: 0;
-    overflow-x: hidden; /* Fix scrollbar issue */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* 📌 Layout */
 .container {
     display: flex;
-    max-width: 1200px; /* Reduce width to fit layout better */
+    max-width: 1400px; /* Optimized width */
     margin: auto;
     padding: 40px;
 }
 
 /* 📌 Sidebar */
 .sidebar {
-    width: 260px;
+    width: 250px;
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
-    background: #2a2a2a;
+    background: #2a2a2a; /* Darker gray for contrast */
     padding: 20px;
     color: white;
     overflow-y: auto;
     border-right: 1px solid #444;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Sidebar Title */
@@ -75,23 +76,51 @@ body {
     color: white;
 }
 
+/* 📌 Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 1000;
+        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
 /* 📌 Main Content */
 .content {
-    margin-left: 280px;
-    padding: 40px;
-    max-width: 900px;
-    width: 100%;
+    margin-left: 270px;
+    padding: 50px;
+    max-width: calc(100% - 270px);
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
+/* 📌 Mobile Content */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
 /* 📌 Header */
 header h1 {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     color: #222;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 header p {
@@ -109,7 +138,13 @@ header p {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ToC List */
+.toc h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1DB954;
+}
+
+/* 📌 ToC List */
 .toc ul {
     list-style: none;
     padding-left: 0;
@@ -128,7 +163,7 @@ header p {
     border-radius: 5px;
 }
 
-/* ToC List Links */
+/* 📌 ToC List Links */
 .toc ul li a {
     color: #1DB954;
     text-decoration: none;
@@ -140,10 +175,22 @@ header p {
     color: #25d366;
 }
 
+/* 📌 ToC Sub-Lists - No Special Styling */
+.toc ul ul {
+    padding-left: 0;
+    border-left: none;
+    margin-top: 0;
+}
+
+.toc ul ul li {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
 /* 📌 Code Blocks */
 pre {
     background: #2e2e2e;
-    padding: 15px;
+    padding: 18px;
     border-radius: 8px;
     overflow-x: auto;
     color: #d4d4d4;
@@ -153,7 +200,7 @@ pre {
     margin-top: 20px;
     margin-bottom: 25px;
     width: 100%;
-    max-width: 880px; /* Matches content width */
+    max-width: 980px;
 }
 
 /* Code Styling */
@@ -183,9 +230,22 @@ section {
     margin-bottom: 10px;
     font-size: 16px;
     color: #222;
+    padding-left: 15px;
 }
 
-/* List Links */
+/* 📌 No Special Styling for Sub-Lists */
+.content ul ul {
+    padding-left: 30px;
+    border-left: none;
+    margin-top: 0;
+}
+
+.content ul ul li {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+/* 📌 List Links */
 .content ul li a {
     color: #1DB954;
     text-decoration: none;
@@ -193,13 +253,24 @@ section {
     transition: color 0.3s;
 }
 
-/* Link Hover Effect */
+/* 📌 Link Hover Effect */
 .content ul li a:hover {
     color: #25d366;
     text-decoration: underline;
 }
 
-/* 📌 Fix Scroll Issues */
+/* 📌 Fix Sidebar Scroll Issues */
 html, body {
     overflow-x: hidden;
+}
+
+/* 📌 Fix Blank Sidebar Issue */
+@media (min-width: 769px) {
+    .sidebar {
+        min-height: 100vh; /* Ensures sidebar takes full height */
+    }
+
+    .content {
+        min-height: 100vh; /* Matches sidebar height */
+    }
 }
