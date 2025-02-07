@@ -9,15 +9,15 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.8;
     color: #333;
-    background-color: #f5f5f5; /* Softer background */
+    background-color: #f8f9fa; /* Slightly softer than plain white */
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* 📌 Layout */
 .container {
     display: flex;
-    max-width: 1500px;
+    max-width: 1400px;
     margin: auto;
     padding: 40px;
 }
@@ -29,11 +29,11 @@ body {
     left: 0;
     top: 0;
     height: 100vh;
-    background: #222;
+    background: #212529; /* Darker for better contrast */
     padding: 25px;
     color: white;
     overflow-y: auto;
-    border-right: 1px solid #444;
+    border-right: 2px solid #343a40;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .sidebar nav ul li a:hover {
-    background: #444;
+    background: #343a40;
     color: #1DB954;
 }
 
@@ -119,7 +119,7 @@ body {
 header h1 {
     font-size: 42px;
     font-weight: bold;
-    color: #222;
+    color: #212529;
     margin-bottom: 30px;
 }
 
@@ -131,11 +131,11 @@ header p {
 /* 📌 Table of Contents (ToC) */
 .toc {
     padding: 20px;
-    background: #f9f9f9;
+    background: #fdfdfd;
     border-left: 4px solid #1DB954;
     margin-bottom: 40px;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05);
 }
 
 .toc h2 {
@@ -178,7 +178,7 @@ header p {
 /* 📌 Code Blocks */
 pre {
     background: #282c34;
-    padding: 20px;
+    padding: 22px;
     border-radius: 10px;
     overflow-x: auto;
     color: #abb2bf;
@@ -200,11 +200,11 @@ code {
 /* 📌 Section Styling */
 section {
     margin-bottom: 60px;
-    padding: 30px;
+    padding: 35px;
     border-bottom: 1px solid #ddd;
     background: white;
     border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* 📌 Lists */
