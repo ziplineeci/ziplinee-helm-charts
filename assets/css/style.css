@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.8;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -17,7 +17,7 @@ body {
 /* 📌 Layout */
 .container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1400px; /* Optimized width */
     margin: auto;
     padding: 40px;
 }
@@ -29,7 +29,7 @@ body {
     left: 0;
     top: 0;
     height: 100vh;
-    background: #2d2d2d;
+    background: #2a2a2a; /* Darker gray for contrast */
     padding: 20px;
     color: white;
     overflow-y: auto;
@@ -100,8 +100,7 @@ body {
 .content {
     margin-left: 270px;
     padding: 50px;
-    max-width: 950px;
-    width: calc(100% - 270px);
+    max-width: calc(100% - 270px);
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -176,6 +175,18 @@ header p {
     color: #25d366;
 }
 
+/* 📌 ToC Sub-Lists - No Special Styling */
+.toc ul ul {
+    padding-left: 0;
+    border-left: none;
+    margin-top: 0;
+}
+
+.toc ul ul li {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
 /* 📌 Code Blocks */
 pre {
     background: #2e2e2e;
@@ -189,7 +200,7 @@ pre {
     margin-top: 20px;
     margin-bottom: 25px;
     width: 100%;
-    max-width: 900px;
+    max-width: 980px;
 }
 
 /* Code Styling */
@@ -236,7 +247,6 @@ section {
 
 /* 📌 List Links */
 .content ul li a {
-    color: #1DB954;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -244,7 +254,6 @@ section {
 
 /* 📌 Link Hover Effect */
 .content ul li a:hover {
-    color: #25d366;
     text-decoration: underline;
 }
 
@@ -253,13 +262,41 @@ html, body {
     overflow-x: hidden;
 }
 
-/* 📌 Fix Sidebar Height */
+/* 📌 Fix Blank Sidebar Issue */
 @media (min-width: 769px) {
     .sidebar {
-        min-height: 100vh;
+        min-height: 100vh; /* Ensures sidebar takes full height */
     }
 
     .content {
-        min-height: 100vh;
+        min-height: 100vh; /* Matches sidebar height */
+    }
+}
+
+/* 📌 Sidebar Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 15px; /* Ensures it stays at the top */
+    left: 15px; /* Positions it properly */
+    background: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Ensures it stays above other elements */
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+.menu-toggle:hover {
+    background: #25d366;
+}
+
+/* 📌 Hide Toggle Button on Larger Screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
 }
