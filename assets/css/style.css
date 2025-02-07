@@ -33,9 +33,10 @@ body {
     color: white;
     overflow-y: auto;
     border-right: 1px solid #333;
-    transition: width 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Sidebar Links */
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 20px;
@@ -43,6 +44,7 @@ body {
 
 .sidebar nav ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .sidebar nav ul li {
@@ -69,18 +71,51 @@ body {
     color: #fff;
 }
 
-/* Collapsible Sidebar */
+/* 📌 Responsive Sidebar (Mobile) */
 @media (max-width: 768px) {
     .sidebar {
-        width: 60px;
-        overflow: hidden;
-        text-align: center;
+        width: 250px;
+        transform: translateX(-100%); /* Hide sidebar */
+        position: fixed;
+        z-index: 1000;
+        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
     }
-    .sidebar:hover {
-        width: 200px;
+
+    .sidebar.open {
+        transform: translateX(0); /* Show sidebar when open */
     }
-    .sidebar nav ul li a {
-        padding: 5px;
+
+    /* 📌 Adjust content width when sidebar is hidden */
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* 📌 Hamburger Menu */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #25d366;
+}
+
+/* Hide menu button on larger screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
 }
 
@@ -171,7 +206,7 @@ section {
     }
 }
 
-/* General Lists */
+/* 📌 Improved Lists */
 .content ul {
     list-style-type: disc;
     padding-left: 20px;

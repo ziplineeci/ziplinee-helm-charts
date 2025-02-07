@@ -18,6 +18,7 @@
 </head>
 <body>
 <div class="container">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
     <aside class="sidebar">
         <h2>{{ site.title | default: site.github.repository_name }}</h2>
         <nav>
@@ -57,6 +58,12 @@
             });
         });
     });
+
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('open');
+    }
+    
 </script>
 
 </body>
