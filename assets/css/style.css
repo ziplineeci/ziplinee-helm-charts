@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.8;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f5f5f5; /* Softer background */
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -17,7 +17,7 @@ body {
 /* 📌 Layout */
 .container {
     display: flex;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: auto;
     padding: 40px;
 }
@@ -30,7 +30,7 @@ body {
     top: 0;
     height: 100vh;
     background: #222;
-    padding: 20px;
+    padding: 25px;
     color: white;
     overflow-y: auto;
     border-right: 1px solid #444;
@@ -131,10 +131,10 @@ header p {
 /* 📌 Table of Contents (ToC) */
 .toc {
     padding: 20px;
-    background: #f1f1f1;
+    background: #f9f9f9;
     border-left: 4px solid #1DB954;
     margin-bottom: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,15 +152,15 @@ header p {
 
 .toc ul li {
     margin: 10px 0;
-    padding: 5px 15px;
+    padding: 6px 15px;
     font-size: 16px;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
 }
 
 .toc ul li:hover {
-    background: #ddd;
-    border-radius: 5px;
+    background: #ececec;
+    border-radius: 6px;
 }
 
 /* 📌 ToC List Links */
@@ -177,11 +177,11 @@ header p {
 
 /* 📌 Code Blocks */
 pre {
-    background: #2e2e2e;
+    background: #282c34;
     padding: 20px;
     border-radius: 10px;
     overflow-x: auto;
-    color: #d4d4d4;
+    color: #abb2bf;
     font-size: 14px;
     border: 1px solid #444;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -193,7 +193,7 @@ pre {
 
 /* Code Styling */
 code {
-    color: #4CAF50;
+    color: #98c379;
     font-size: 15px;
 }
 
@@ -203,7 +203,7 @@ section {
     padding: 30px;
     border-bottom: 1px solid #ddd;
     background: white;
-    border-radius: 6px;
+    border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
