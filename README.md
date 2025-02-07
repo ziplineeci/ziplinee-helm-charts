@@ -84,6 +84,7 @@ helm install ziplinee-ci ./ziplinee-ci --namespace ziplineeci --wait`
 ```
 This command will deploy the Ziplinee CI components into the ziplineeci namespace within your Kind cluster. The --wait flag ensures that Helm waits until all components are successfully deployed.
 
+
 ## Verify Deployment
 
 To verify that the deployment was successful, check the status of the Helm release:
