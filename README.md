@@ -1,4 +1,4 @@
-Welcome to the official Helm repository for NextGen CI. This repository contains Helm charts for deploying and managing the core components of the NextGen CI platform.
+Welcome to the official Helm repository for Ziplinee CI. This repository contains Helm charts for deploying and managing the core components of the Ziplinee CI platform.
 
 ## Table of Contents
 
@@ -77,12 +77,12 @@ make setup-env
 
 ## Deploying the Helm chart
 
-With the Kind cluster running, you can now deploy the NextGen CI components using Helm. First, ensure your repository is cloned to your local machine.
+With the Kind cluster running, you can now deploy the Ziplinee CI components using Helm. First, ensure your repository is cloned to your local machine.
 
 ```shell
 helm install ziplinee-ci ./ziplinee-ci --namespace ziplineeci --wait`
 ```
-This command will deploy the NextGen CI components into the ziplineeci namespace within your Kind cluster. The --wait flag ensures that Helm waits until all components are successfully deployed.
+This command will deploy the Ziplinee CI components into the ziplineeci namespace within your Kind cluster. The --wait flag ensures that Helm waits until all components are successfully deployed.
 
 ## Verify Deployment
 
@@ -91,4 +91,4 @@ To verify that the deployment was successful, check the status of the Helm relea
 ```shell
 helm list -n ziplineeci
 ```
-This command lists all Helm releases in the ziplineeci namespace, allowing you to verify the status of your NextGen CI deployment.
+This command lists all Helm releases in the ziplineeci namespace, allowing you to verify the status of your Ziplinee CI deployment.
