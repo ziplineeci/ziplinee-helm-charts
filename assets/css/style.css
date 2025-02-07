@@ -36,7 +36,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar Links */
+/* Sidebar Navigation */
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 20px;
@@ -85,7 +85,7 @@ body {
         transform: translateX(0); /* Show sidebar when open */
     }
 
-    /* 📌 Adjust content width when sidebar is hidden */
+    /* Adjust content when sidebar is hidden */
     .content {
         margin-left: 0;
         width: 100%;
@@ -126,9 +126,9 @@ body {
     max-width: 900px;
 }
 
-/* Header */
+/* 📌 Header Fixes */
 header h1 {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 15px;
@@ -139,7 +139,7 @@ header p {
     font-size: 16px;
 }
 
-/* Table of Contents */
+/* 📌 FIXED: Table of Contents */
 .toc {
     padding: 15px;
     background: #1a1a1a;
@@ -149,14 +149,15 @@ header p {
 }
 
 .toc h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #1DB954;
 }
 
+/* 📌 FIXED: Proper Nested TOC Styling */
 .toc ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 15px;
 }
 
 .toc ul li {
@@ -166,14 +167,27 @@ header p {
 .toc ul li a {
     color: #1DB954;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .toc ul li a:hover {
+    color: #25d366;
     text-decoration: underline;
 }
 
-/* Code Blocks */
+/* FIXED: Proper Nested Lists in TOC */
+.toc ul ul {
+    padding-left: 20px;
+    border-left: 2px solid #1DB954;
+    margin-top: 5px;
+}
+
+.toc ul ul li {
+    margin: 3px 0;
+}
+
+/* 📌 Code Blocks */
 pre {
     background: #1e1e1e;
     padding: 15px;
@@ -184,29 +198,20 @@ pre {
     border: 1px solid #333;
 }
 
+/* Improved Code Block Styling */
 code {
     color: #4CAF50;
     font-size: 14px;
 }
 
-/* Section Styling */
+/* 📌 Section Styling */
 section {
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #333;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .content {
-        margin-left: 0;
-    }
-}
-
-/* 📌 Improved Lists */
+/* 📌 FIXED: Regular Content Lists (Separate from TOC) */
 .content ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -238,4 +243,16 @@ section {
 .content ul li a:hover {
     color: #25d366;
     text-decoration: underline;
+}
+
+/* 📌 Nested Lists Fix */
+.content ul ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    border-left: 2px solid #888;
+}
+
+.content ul ul li {
+    padding: 4px 10px;
+    background: #181818;
 }
