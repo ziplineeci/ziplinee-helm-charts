@@ -1,0 +1,60 @@
+apiVersion: v1
+entries:
+  ziplinee-ci:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-04-30T13:16:45.449977+02:00"
+    dependencies:
+    - alias: api
+      condition: api.enabled
+      name: ziplinee-ci-api
+      repository: ""
+      version: ^1
+    - alias: db-migrator
+      condition: db-migrator.enabled
+      name: ziplinee-ci-db-migrator
+      repository: ""
+      version: ^1
+    - alias: db-client
+      condition: db-client.enabled
+      name: ziplinee-ci-db-client
+      repository: ""
+      version: ^1
+    - alias: web
+      condition: web.enabled
+      name: ziplinee-ci-web
+      repository: ""
+      version: ^1
+    - alias: db
+      condition: db.enabled
+      name: cockroachdb
+      repository: https://charts.cockroachdb.com/
+      version: 10.0.6
+    - alias: metrics
+      condition: metrics.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 14.8.0
+    - alias: queue
+      condition: queue.enabled
+      name: nats
+      repository: https://nats-io.github.io/k8s/helm/charts/
+      version: 0.8.9
+    - condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.5.3
+    - condition: external-dns.enabled
+      name: external-dns
+      repository: https://kubernetes-sigs.github.io/external-dns/
+      version: 1.2.0
+    description: The resilient and cloud-native CI/CD platform
+    digest: 17e19676334c2451d538faf83eec4fd78f000edaf8c6e79dea8991b5e54bd93b
+    home: https://helm-ziplinee.malsharbaji.com
+    icon: https://helm-ziplinee.malsharbaji.com/icon.png
+    name: ziplinee-ci
+    type: application
+    urls:
+    - https://helm-ziplineeci.malsharbaji.com/ziplinee-ci-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-04-30T13:16:45.435091+02:00"
