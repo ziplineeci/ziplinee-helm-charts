@@ -3,7 +3,7 @@ entries:
   ziplinee-ci:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-30T13:17:53.658269+02:00"
+    created: "2025-05-01T14:37:15.213311+02:00"
     dependencies:
     - alias: api
       condition: api.enabled
@@ -49,12 +49,12 @@ entries:
       repository: https://kubernetes-sigs.github.io/external-dns/
       version: 1.2.0
     description: The resilient and cloud-native CI/CD platform
-    digest: b0d6ecc7ccddef2ebd9287f76e726bd6280540be071c950b04feb63b5ef90857
+    digest: 58ad8ba6bc0a887d9c8007be77b63180c84f43d515ccf3a33246237cc69b7ad0
     home: https://helm-ziplinee.malsharbaji.com
     icon: https://helm-ziplinee.malsharbaji.com/icon.png
     name: ziplinee-ci
     type: application
     urls:
-    - https://helm-ziplineeci.malsharbaji.com/ziplinee-ci-1.0.0.tgz
+    - https://helm-ziplineeci.malsharbaji.com/charts/charts/ziplinee-ci-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-30T13:17:53.647472+02:00"
+generated: "2025-05-01T14:37:15.199064+02:00"
